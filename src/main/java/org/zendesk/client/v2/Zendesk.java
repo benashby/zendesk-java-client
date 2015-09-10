@@ -763,7 +763,7 @@ public class Zendesk implements Closeable {
     }
 
     private Request req(String method, Uri template, int page) {
-        RequestBuilder builder = new RequestBuilder(method);
+        RequestBuilder builder = new RequestBuilder(method,true);
         if (realm != null) {
             builder.setRealm(realm);
         }
